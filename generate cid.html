@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <form>
+        <label for="randomNumber">Random Number:</label>
+        <input type="text" id="randomNumber" name="randomNumber" readonly>
+        <button type="button" id="generateButton">Generate</button>
+        <label>Name: </label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function generateRandomNumber() {
+            const randomNumber = Math.floor(Math.random() * 90000) + 10000; // Generates a 5-digit random number
+            document.getElementById('randomNumber').value = randomNumber;
+        }
+
+        document.getElementById('generateButton').addEventListener('click', generateRandomNumber);
+    </script>
+</body>
+</html>
